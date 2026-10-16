@@ -20,12 +20,6 @@ Starting from an SFT-initialized policy, ICOR applies **Group Relative Policy Op
 
 > **Core idea:** Use graph constraints to shape the exploration space for policy learning—not merely to validate generated paths after the fact.
 
-<p align="center">
-  <img src="assets/icor_overview.png" alt="ICOR grounds exploration in a retrieved relation space, reducing schema-mismatched actions and improving the availability of useful graph execution feedback." width="900">
-</p>
-
-*Figure 1 from the paper. Unconstrained generation can produce schema-mismatched actions; ICOR constructs a query-conditioned relation space to make executable, informative rollouts more likely.*
-
 ## Method
 
 ### 1. Construct a query-specific relation space
@@ -55,7 +49,7 @@ Relative advantages are normalized within each stage's valid subset. Empty subse
 ### A concrete example: faithful retrieval
 
 <p align="center">
-  <img src="assets/icor_case_study.png" alt="A CWQ example in which unconstrained generation uses the incorrect relation name location.statistical_region.religion, while ICOR selects location.statistical_region.religions and retrieves the answer." width="900">
+  <img src="assets/icor_case_study.svg" alt="A CWQ example in which unconstrained generation uses the incorrect relation name location.statistical_region.religion, while ICOR selects location.statistical_region.religions and retrieves the answer." width="900">
 </p>
 
 *Figure 2 from the paper. For “what religions are popular in france?”, a free-form plan uses `location.statistical_region.religion` instead of the KG relation `location.statistical_region.religions`. ICOR selects the graph's actual relation and composes an executable retrieval path.*

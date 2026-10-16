@@ -4,9 +4,11 @@
 
 ### Interactive Combinatorial Reinforcement Learning for Knowledge Graph Reasoning
 
+**Accepted at NeurIPS 2026**
+
 **Graph-grounded exploration. Multi-turn interaction. Dependency-aware reinforcement learning.**
 
-[Overview](#overview) · [Method](#method) · [Results](#results) · [Code and Data](#code-and-data)
+[Overview](#overview) · [Method](#method) · [Results](#results) · [Experimental Configuration](#experimental-configuration)
 
 </div>
 
@@ -146,10 +148,6 @@ Settings below are reported in Section 4.1 and Appendix A.4 of the paper.
 ## Scope and Limitations
 
 ICOR depends on the quality and connectivity of the underlying KG and the recall of the relation retriever. Missing graph edges, incorrect schemas, or excluded relevant relations can prevent successful reasoning. The SFT and staged RL training also introduce overhead compared with prompting-only approaches. Evaluation beyond the reported Freebase and WikiMovies benchmarks remains future work.
-
-## Code and Data
-
-Code and data will be released upon acceptance, as described in the paper. This initial repository provides the method overview and reported experimental results.
 
 ## Citation
 
